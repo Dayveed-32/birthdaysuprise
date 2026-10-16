@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fff8fb;
+    color: #49313f;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+}
+.hero {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top left, #ffe1ed, transparent 45%),
+        linear-gradient(135deg, #fff8fb, #ffeaf3, #fff0f5);
+
+    position: relative;
+    overflow: hidden;
+}
+.badge {
+    background: white;
+    color: #d63384;
+    border: 1px solid #ffc4dc;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+.small-text {
+    color: #bd5684;
+    margin-bottom: 10px;
+}
+.hero h1 {
+    font-size: clamp(38px, 7vw, 75px);
+    color: #8c2455;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero h1 span {
+    color: #e84393;
+}
+.hero-message {
+    max-width: 580px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.birthday-icon {
+    font-size: 85px;
+    margin: 20px 0;
+    animation: bounce 2s infinite;
+}
+#surpriseBtn,
+#celebrateBtn {
+    background: linear-gradient(135deg, #e84393, #b83280);
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 8px 25px #e8439340;
+    transition: 0.3s;
+}
+#surpriseBtn:hover,
+#celebrateBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px #e8439360;
+}
+.scroll-text {
+    margin-top: 35px;
+    color: #9b6c83;
+    font-size: 14px;
+}
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+.heart {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp 7s linear forwards;
+    opacity: 0.8;
+}
+.letter-section {
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+.letter-card {
+    max-width: 750px;
+    padding: 45px;
+    background: #fff8fb;
+    border: 1px solid #ffe0ed;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px #8c245510;
+}
+.section-label {
+    color: #d63384;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.letter-card h2 {
+    text-align: center;
+    color: #8c2455;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.letter-card p {
+    margin-bottom: 18px;
+}
+.letter-card h3 {
+    text-align: center;
+    color: #d63384;
+    margin-top: 30px;
+}
+.signature {
+    text-align: right;
+    margin-top: 30px;
+}
+.reasons {
+    padding: 80px 20px;
+    text-align: center;
+}
+.reasons h2,
+.memories h2 {
+    color: #8c2455;
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+.reason-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.reason-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    border: 1px solid #ffe0ed;
+    transition: 0.3s;
+}
+.reason-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px #8c245510;
+}
+.reason-card span {
+    font-size: 45px;
+}
+.reason-card h3 {
+    color: #b83280;
+    margin: 15px 0 10px;
+}
+.memories {
+    background: #fff0f6;
+    padding: 80px 20px;
+    text-align: center;
+}
+.gallery-text {
+    margin-bottom: 30px;
+}
+.photo-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.photo-card {
+    background: white;
+    padding: 12px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #8c245510;
+    transition: 0.3s;
+}
+.photo-card:hover {
+    transform: rotate(-1deg) scale(1.02);
+}
+.photo-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+.photo-card p {
+    padding: 12px 5px;
+    color: #8c2455;
+    font-weight: 600;
+}
+.photo-note {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #9b6c83;
+}
+.final-message {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #8c2455, #d63384);
+    color: white;
+}
+.final-heart {
+    font-size: 65px;
+    animation: heartbeat 1.5s infinite;
+}
+.final-message h2 {
+    font-size: 35px;
+    margin: 20px 0;
+}
+.final-message p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+.final-message h3 {
+    margin-bottom: 25px;
+}
+#celebrateBtn {
+    background: white;
+    color: #b83280;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #571b39;
+    color: white;
+    font-size: 14px;
+}
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-message {
+        font-size: 16px;
+    }
+
+    .letter-card {
+        padding: 25px;
+    }
+
+    .reason-container,
+    .photo-container {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .photo-card img {
+        height: 350px;
+    }
+
+    .reasons h2,
+    .memories h2,
+    .final-message h2 {
+        font-size: 28px;
+    }
+}
